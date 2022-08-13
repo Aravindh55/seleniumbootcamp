@@ -32,7 +32,7 @@ public class CreateLegalEntity {
 	    driver.findElement(By.xpath("//div[contains(@class,'slds-icon-w')]")).click();
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//button[contains(text(),'View')]")).click();
-		driver.findElement(By.xpath("//input[contains(@placeholder,'s')]")).sendKeys("Legal Entities");
+		driver.findElement(By.xpath("//input[contains(@placeholder,'s')]")).sendKeys("sales");
 		driver.findElement(By.xpath("//p[contains(@class,'s')]")).click();
 	
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//one-app-nav-bar-item-dropdown//div[contains(@class,'context-bar')])[15]")));
