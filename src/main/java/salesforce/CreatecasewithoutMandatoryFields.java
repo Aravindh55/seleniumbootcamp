@@ -73,7 +73,7 @@ public class CreatecasewithoutMandatoryFields {
 			throw new RuntimeException();
 		}
 		
-		
+		driver.quit();
 
 	}
 
