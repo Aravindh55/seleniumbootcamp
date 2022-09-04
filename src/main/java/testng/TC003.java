@@ -21,14 +21,13 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class TC003 {
 	ChromeDriver driver;
 
-	@Test(dataProvider = "data1")
-	public void runMethod1(String name, int age) {
-		System.out.println(name);
-		System.out.println(age);
+	@Test(dataProvider = "data2")
+	public void runMethod1(String url) {
+		
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
-		driver.get("https://login.salesforce.com");
-		Assert.assertTrue(false);
+		driver.get(url);
+		//Assert.assertTrue(false);
 	}
 
 	@Test(dataProvider = "data2")
@@ -42,9 +41,9 @@ public class TC003 {
 		return new Object[][] { { "aravindh", 27 } };
 	}
 
-	@DataProvider
+	@DataProvider(parallel=true)
 	public String[][] data2() {
-		return new String[][] { { "aravindh" }, { "guru" } };
+		return new String[][] { { "https://login.salesforce.com" }, { "https://login.salesforce.com" } };
 	}
 
 	@AfterMethod
