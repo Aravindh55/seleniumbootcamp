@@ -1,4 +1,4 @@
-package test;
+package factorydesignpattern;
 
 import static io.restassured.RestAssured.given;
 
